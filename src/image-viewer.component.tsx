@@ -146,6 +146,11 @@ export default class ImageViewer extends React.Component<Props, State> {
     this.loadedIndex.set(index, true);
 
     const image = this.props.imageUrls[index];
+
+    if (image.url.includes("quality")) {
+      return;
+    }
+    
     const imageStatus = { ...this!.state!.imageSizes![index] };
 
     // 保存 imageSize
