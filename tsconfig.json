@@ -2,6 +2,7 @@
   "compilerOptions": {
     "declaration": true,
     "module": "commonjs",
+    "baseUrl": "./",
     "strict": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -12,5 +13,7 @@
     "sourceMap": true,
     "skipLibCheck": true
   },
-  "exclude": ["node_modules", "demo"]
+  "include": ["src"],
+  "exclude": ["node_modules", "./node_modules", "node_modules/react-native/types/", "./node_modules/*", "./node_modules/@types/node/index.d.ts", "demo"],
+  "resolveJsonModule": true
 }
